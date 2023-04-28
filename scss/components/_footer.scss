@@ -1,0 +1,114 @@
+footer {
+    display: grid;
+    grid-template-columns: 208px 120px 80px 208px 78px;
+    grid-template-rows: 1fr;
+    align-items: start;
+    justify-content: space-evenly;
+    padding: 50px;
+    background-color: $bg-dark;
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        .no-link {
+            color: $bg-green;
+        }
+    }
+    
+    .seccion-logo {
+        .container-animated-card {
+            animation-name: logo-animation;
+            animation-iteration-count: infinite;
+            animation-duration: 1s;
+            animation-timing-function: linear; 
+            @include size(150px,150px);
+            position: relative;
+            &:hover {
+                animation: none;
+
+                .front-card {
+                    transform: rotateZ(180deg) rotateY(180deg);
+                }
+
+                .back-card {
+                    transform: rotateZ(360deg) rotateY(360deg);
+                }
+                
+            }
+            .card-side {
+                @include size(100%,100%);
+                position: absolute;
+                overflow: hidden;
+                backface-visibility: hidden;
+                transition: all $sec-md linear;
+                border-radius: 1em;
+            }
+            .front-card {
+                transform: rotateZ(0deg) rotateY(0deg);
+                .logo-footer {
+                    @include size(100%,100%);
+                    overflow: hidden;
+                }
+            }
+            .back-card {
+                transform: rotateZ(180deg) rotateY(180deg);
+                padding: 10px;
+                background: linear-gradient(45deg, $bg-green, $bg-blue);
+                @include flex-column(center,center);
+                ul {
+                    @include flex-column(center,center,10px);
+                    li {
+                        text-align: center;
+                        color: $bg-green;
+                        font-size: $xs;
+                        color: $bg-dark;
+                    }
+                }
+            }
+        }
+    }
+    
+    .seccion-footer {
+        @include flex-column(center,center,10px);
+        
+        .title-footer {
+            color: $bg-white;
+            @include border(2px, $bg-white, $lados:bottom);
+            font-size: $md;
+            align-self: flex-start;
+        }
+        
+        .a-footer {
+            text-decoration: none;
+            color: $bg-green;
+            transition: all $sec-md ease;
+            &:hover {
+                color: $bg-blue;
+            }
+        }
+        
+        .redes-botones {
+            a {
+                i {
+                    color: $bg-green;
+                    transition: all $sec-md ease;
+                    &:hover {
+                        color: $bg-blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes logo-animation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

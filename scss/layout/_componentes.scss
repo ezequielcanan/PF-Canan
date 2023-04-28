@@ -1,0 +1,59 @@
+.container__componentes {
+    @include flex-column($align:center);
+    background-color: $bg-light;
+    &__galeria {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px;
+        grid-template-areas: 
+        "asus asus amd"
+        "intel giga giga"
+        "nvidia nvidia aorus";
+        &__container__img {
+            @include size(100%);
+            min-height: 400px;
+            max-height: 100%;
+            &__img {
+                object-fit: cover;
+                @include size(100%, 100%);
+                filter: grayscale(85%);
+                transition: all $sec-md ease;
+                border-radius: .5em;
+                &:hover {
+                    filter: grayscale(0);
+                }
+            }
+        }
+        &__container__img-asus {
+            grid-area: asus;
+        }
+        
+        &__container__img-amd {
+            grid-area: amd;
+        }
+        
+        &__container__img-intel {
+            grid-area: intel;
+        }
+        
+        &__container__img-giga {
+            grid-area: giga;
+        }
+        
+        &__container__img-aorus {
+            grid-area: aorus;
+        }
+        
+        &__container__img-nvidia {
+            grid-area: nvidia;
+        }
+    }
+    &__parrafo {
+        @include size(85%);
+        padding: 20px;
+        &__p {
+            font-size: $md;
+        }
+    }
+}

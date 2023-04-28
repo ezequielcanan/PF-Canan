@@ -1,0 +1,584 @@
+@charset "UTF-8";
+/*Base*/
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+/*Colores*/
+/*Fuente*/
+/*Tamaños*/
+/*Segundos*/
+/*Breakpoints*/
+/*Buttons*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/*Buttons*/
+.btn-primary {
+  transition: all 0.1s ease;
+  border: none;
+  border-radius: 0.4em;
+  background-color: #0e91e9;
+  width: 100px;
+  height: auto;
+  padding: 10px 20px;
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: #0b73b9;
+}
+.btn-primary:active {
+  transform: scale(0.94);
+}
+
+.btn-buy {
+  transition: all 0.1s ease;
+  border: none;
+  border-radius: 0.4em;
+  background-color: #24b024;
+  width: 100px;
+  height: auto;
+  padding: 10px 20px;
+  color: #fff;
+}
+.btn-buy:hover {
+  background-color: #1b861b;
+}
+.btn-buy:active {
+  transform: scale(0.94);
+}
+
+.btn-danger {
+  transition: all 0.1s ease;
+  border: none;
+  border-radius: 0.4em;
+  background-color: #f10c0c;
+  width: 100px;
+  height: auto;
+  padding: 10px 20px;
+  color: #fff;
+}
+.btn-danger:hover {
+  background-color: #c00a0a;
+}
+.btn-danger:active {
+  transform: scale(0.94);
+}
+
+/*Components*/
+.navbar-expand-md {
+  background-color: #393e46;
+}
+.navbar-expand-md .navbar-collapse {
+  justify-content: flex-end;
+}
+.navbar-expand-md .navbar-collapse .navbar-nav {
+  gap: 30px;
+}
+.navbar-expand-md .navbar-collapse .navbar-nav a {
+  color: #eeeeee;
+}
+.navbar-expand-md .navbar-collapse .navbar-nav a:hover {
+  color: #32e0c4 !important;
+}
+.navbar-expand-md .navbar-collapse .navbar-nav a:focus {
+  color: #eeeeee;
+}
+.navbar-expand-md .navbar-collapse .navbar-nav .active {
+  color: #eeeeee !important;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 208px 120px 80px 208px 78px;
+  grid-template-rows: 1fr;
+  align-items: start;
+  justify-content: space-evenly;
+  padding: 50px;
+  background-color: #222831;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+footer ul .no-link {
+  color: #32e0c4;
+}
+footer .seccion-logo .container-animated-card {
+  animation-name: logo-animation;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  width: 150px;
+  height: 150px;
+  position: relative;
+}
+footer .seccion-logo .container-animated-card:hover {
+  animation: none;
+}
+footer .seccion-logo .container-animated-card:hover .front-card {
+  transform: rotateZ(180deg) rotateY(180deg);
+}
+footer .seccion-logo .container-animated-card:hover .back-card {
+  transform: rotateZ(360deg) rotateY(360deg);
+}
+footer .seccion-logo .container-animated-card .card-side {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transition: all 0.4s linear;
+  border-radius: 1em;
+}
+footer .seccion-logo .container-animated-card .front-card {
+  transform: rotateZ(0deg) rotateY(0deg);
+}
+footer .seccion-logo .container-animated-card .front-card .logo-footer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+footer .seccion-logo .container-animated-card .back-card {
+  transform: rotateZ(180deg) rotateY(180deg);
+  padding: 10px;
+  background: linear-gradient(45deg, #32e0c4, #0e91e9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+footer .seccion-logo .container-animated-card .back-card ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+footer .seccion-logo .container-animated-card .back-card ul li {
+  text-align: center;
+  color: #32e0c4;
+  font-size: 14px;
+  color: #222831;
+}
+footer .seccion-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+footer .seccion-footer .title-footer {
+  color: #fff;
+  border-bottom: 2px #fff solid;
+  border-radius: auto;
+  font-size: 24px;
+  align-self: flex-start;
+}
+footer .seccion-footer .a-footer {
+  text-decoration: none;
+  color: #32e0c4;
+  transition: all 0.4s ease;
+}
+footer .seccion-footer .a-footer:hover {
+  color: #0e91e9;
+}
+footer .seccion-footer .redes-botones a i {
+  color: #32e0c4;
+  transition: all 0.4s ease;
+}
+footer .seccion-footer .redes-botones a i:hover {
+  color: #0e91e9;
+}
+
+@keyframes logo-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/*Layout*/
+.container__two {
+  background-color: #eeeeee;
+  margin: 0;
+}
+.container__two__cards {
+  justify-content: space-around;
+  padding: 32px;
+  margin: 0;
+}
+.container__two__cards__card-inicio {
+  padding: 10px;
+  transition: all 0.4s ease;
+}
+.container__two__cards__card-inicio__body__title {
+  font-size: 24px;
+}
+.container__two__cards__card-inicio:hover {
+  border: 1px #333 solid;
+  border-radius: auto;
+}
+.container__two__puntos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+}
+.container__two__puntos__punto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: auto;
+  width: 210px;
+  height: 210px;
+  padding: 40px 20px;
+  border: 2px #0a4e97 solid;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+.container__two__puntos__punto:hover {
+  border-color: #1b9fb6;
+}
+.container__two__puntos__punto__icon {
+  color: #333;
+  font-size: 18px;
+  border: 1px #333 solid;
+  border-radius: 50%;
+  padding: 7px;
+}
+.container__two__puntos__punto__titulo {
+  font-size: 24px;
+  color: #333;
+  border-bottom: 2px #333 solid;
+  border-radius: auto;
+  text-align: center;
+  width: 80%;
+}
+.container__two__puntos__punto__parrafo {
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+}
+
+.main-form {
+  padding: 0;
+}
+.main-form .container__form {
+  justify-content: center;
+  align-items: center;
+  background-color: #eeeeee;
+  padding: 30px;
+  margin: 0;
+}
+.main-form .container__form__icon {
+  font-size: 270px;
+  text-align: center;
+  color: #0e91e9;
+}
+.main-form .container__form__inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: auto;
+  gap: 0;
+}
+.main-form .container__form__inputs__lista {
+  list-style: none;
+  padding: 0;
+}
+.main-form .container__form__inputs__lista__input {
+  width: 80%;
+  height: auto;
+  transition: all 0.4s ease;
+}
+.main-form .container__form__inputs__lista__input:focus {
+  box-shadow: 4px 4px 5px 0px #10af97;
+  border-color: #10af97;
+}
+
+.container__componentes {
+  display: flex;
+  flex-direction: column;
+  justify-content: auto;
+  align-items: center;
+  gap: 0;
+  background-color: #eeeeee;
+}
+.container__componentes__galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  grid-template-areas: "asus asus amd" "intel giga giga" "nvidia nvidia aorus";
+}
+.container__componentes__galeria__container__img {
+  width: 100%;
+  height: auto;
+  min-height: 400px;
+  max-height: 100%;
+}
+.container__componentes__galeria__container__img__img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(85%);
+  transition: all 0.4s ease;
+  border-radius: 0.5em;
+}
+.container__componentes__galeria__container__img__img:hover {
+  filter: grayscale(0);
+}
+.container__componentes__galeria__container__img-asus {
+  grid-area: asus;
+}
+.container__componentes__galeria__container__img-amd {
+  grid-area: amd;
+}
+.container__componentes__galeria__container__img-intel {
+  grid-area: intel;
+}
+.container__componentes__galeria__container__img-giga {
+  grid-area: giga;
+}
+.container__componentes__galeria__container__img-aorus {
+  grid-area: aorus;
+}
+.container__componentes__galeria__container__img-nvidia {
+  grid-area: nvidia;
+}
+.container__componentes__parrafo {
+  width: 85%;
+  height: auto;
+  padding: 20px;
+}
+.container__componentes__parrafo__p {
+  font-size: 24px;
+}
+
+.container__tienda {
+  background-color: #eeeeee;
+}
+.container__tienda__aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: auto;
+  align-items: auto;
+  gap: 30px;
+}
+.container__tienda__aside__filtro__ul {
+  list-style: none;
+}
+.container__tienda__aside__filtro__ul li .h3-filtro {
+  font-size: 24px;
+  color: #777;
+}
+.container__tienda .container__tienda__items__cards {
+  justify-content: space-evenly;
+}
+.container__tienda .container__tienda__items__cards__card {
+  transition: all 0.4s ease;
+}
+.container__tienda .container__tienda__items__cards__card:hover {
+  border: 1px #333 solid;
+  border-radius: auto;
+}
+
+.container__texto-nosotros {
+  display: flex;
+  flex-direction: column;
+  justify-content: auto;
+  align-items: auto;
+  gap: 0;
+  background-color: #eeeeee;
+}
+.container__texto-nosotros h2 {
+  font-size: 40px;
+  color: #222831;
+}
+.container__texto-nosotros__img {
+  width: 100%;
+  height: auto;
+}
+.container__texto-nosotros__img img {
+  width: 100%;
+  height: auto;
+  border: 2px #222831 solid;
+  border-radius: 1em;
+}
+
+.container__texto2-nosotros {
+  display: flex;
+  flex-direction: column;
+  justify-content: auto;
+  align-items: auto;
+  gap: 0;
+  background-color: #32e0c4;
+}
+.container__texto2-nosotros h3 {
+  font-size: 32px;
+}
+
+.texto-nosotros {
+  padding: 20px;
+}
+.texto-nosotros p {
+  font-size: 24px;
+}
+
+/*992 PIXELES*/
+@media screen and (max-width: 991px) {
+  /*Footer*/
+  footer {
+    grid-template-columns: 40% 40% !important;
+    grid-template-rows: auto;
+    align-content: center;
+    gap: 30px;
+    grid-template-areas: "logo logo" "categorias marcas" "contacto redes";
+    padding: 60px 0;
+  }
+  footer ul li {
+    text-align: center;
+  }
+  footer .seccion-logo {
+    grid-area: logo;
+    justify-self: center;
+    text-align: center;
+  }
+  footer .seccion-footer .title-footer {
+    align-self: center;
+  }
+  footer .categorias-footer {
+    grid-area: categorias;
+  }
+  footer .marcas-footer {
+    grid-area: marcas;
+  }
+  footer .contacto-footer {
+    grid-area: contacto;
+  }
+  footer .redes-footer {
+    grid-area: redes;
+  }
+  /*Index*/
+  .container__two__puntos {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "garantia service" "calidad calidad";
+  }
+  .container__two__puntos .garantia {
+    grid-area: garantia;
+  }
+  .container__two__puntos .service {
+    grid-area: service;
+  }
+  .container__two__puntos .calidad {
+    grid-area: calidad;
+  }
+  /*Componentes*/
+  .container__componentes__galeria {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "asus aorus" "giga giga" "intel amd" "nvidia nvidia";
+  }
+  .container__componentes__galeria__container__img__img {
+    filter: grayscale(0);
+  }
+  /*PCS*/
+  .container__tienda__aside {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "titulo titulo titulo" "cpu mother ram";
+    justify-items: center;
+    align-content: center;
+    padding-bottom: 30px;
+  }
+  .container__tienda__aside__header {
+    grid-area: titulo;
+  }
+  .container__tienda__aside__filtro-mother {
+    grid-area: mother;
+  }
+  .container__tienda__aside__filtro-cpu {
+    grid-area: cpu;
+  }
+  .container__tienda__aside__filtro-ram {
+    grid-area: ram;
+  }
+}
+@media screen and (max-width: 767px) {
+  /*Navbar*/
+  .navbar-expand-md .navbar-collapse .navbar-nav {
+    gap: 0;
+  }
+  /*Contacto*/
+  .container__form__inputs__button {
+    align-self: flex-end;
+  }
+  .main-form .container__form__inputs__lista__input {
+    width: 100%;
+    height: auto;
+  }
+  /*PCS*/
+  .container__tienda__aside {
+    grid-template-columns: 1fr;
+    grid-template-areas: "titulo" "cpu" "mother" "ram";
+  }
+  /*Nosotros*/
+  .texto-nosotros h2 {
+    font-size: 32px;
+  }
+  .texto-nosotros h3 {
+    font-size: 24px;
+  }
+  .texto-nosotros p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container__two__puntos {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "garantia" "service" "calidad";
+    gap: 30px;
+  }
+  /*CONTACTO*/
+  .main-form .container__form__icon {
+    font-size: 200px;
+  }
+  /*Componentes*/
+  .container__componentes__galeria {
+    grid-template-columns: 1fr;
+    grid-template-areas: "asus" "aorus" "giga" "intel" "amd" "nvidia";
+  }
+  .container__componentes__parrafo__p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  footer {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto;
+    align-content: center;
+    grid-template-areas: "logo" "categorias" "marcas" "contacto" "redes";
+  }
+  /*CONTACTO*/
+  .main-form .container__form__icon {
+    font-size: 150px;
+  }
+  .main-form .container__form__inputs__button {
+    align-self: center;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

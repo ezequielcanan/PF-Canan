@@ -1,0 +1,35 @@
+.main-form {
+    padding: 0;
+    
+    .container__form {
+        justify-content: center;
+        align-items: center;
+        background-color: $bg-light;
+        padding: 30px;
+        margin: 0;
+        
+        &__icon {
+            font-size: 270px;
+            text-align: center;
+            color: $bg-blue;
+        }
+        
+        &__inputs {
+            @include flex-column(center);
+            
+            &__lista {
+                list-style: none;
+                padding: 0;
+                
+                &__input {
+                    @include size(80%);
+                    transition: all $sec-md ease;
+                    &:focus {
+                        box-shadow: 4px 4px 5px 0px #10af97;
+                        border-color: #10af97;
+                    }
+                }
+            }
+        }
+    }
+}

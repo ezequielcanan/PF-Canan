@@ -1,0 +1,32 @@
+.container__texto-nosotros {
+    @include flex-column();
+    background-color: $bg-light;
+    h2 {
+        font-size: $xl;
+        color: $bg-dark;
+    }
+
+    &__img {
+        @include size(100%);
+
+        img {
+            @include size(100%);
+            @include border(2px, $bg-dark, 1em);
+        }
+    }
+}
+
+.container__texto2-nosotros {
+    @include flex-column();
+    background-color: $bg-green;
+    h3 {
+        font-size: $lg;
+    }
+}
+
+.texto-nosotros {
+    padding: 20px;
+    p {
+        font-size: $md;
+    }
+}
