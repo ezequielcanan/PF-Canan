@@ -305,6 +305,9 @@ footer .seccion-footer .redes-botones a i:hover {
   box-shadow: 4px 4px 5px 0px #10af97;
   border-color: #10af97;
 }
+.main-form .container__form__inputs__lista textarea {
+  resize: none;
+}
 
 .container__componentes {
   display: flex;
